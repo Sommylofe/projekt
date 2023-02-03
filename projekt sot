@@ -1,0 +1,224 @@
+import math
+
+while 1:
+    print ("Witam w programie pomocniczym do gry sea of thieves. Posiada on rozne opcje takie jak: ustawienia zagli, opisy wydarzen czy moze chcesz dowiedziec sie gdzie jest najblizsza przystan")
+    print ("Sposób wybóru jest prosty: jeżeli chcesz info o żaglach napisz ZAGLE jezeli wydarzenie to EVENT a jezeli przystan to OUTPOST")
+
+    #jak moge pomoc
+    jmpl = input('chce wybrac: ').lower()
+
+    #print(jmp)
+
+    #zmiana na male litery
+
+
+    if jmpl == "event":
+        
+        while 1:
+
+            print('w sea of thieves posiadamy 7 różnych wydarzen mozemy je rozpoznać po prostu patrząc w niebo:')
+            print('// tornado // poznamy po wielkim czerownym tornadzie. Po wiecej informacji napisz TORNADO')
+            print('// fort szkieletów // poznamy po chmurze przypominającej czaszke z zielonymi oczami. Po wiecej informacji napisz SKELLY')
+            print('// fort fortuny // poznamy po chmurze przypominającej pękniętą czaszke z czerwonymi oczami. Po wiecej informacji napisz FORTUNA')
+            print('// flota // poznamy ją po dużej zielona chmura w kształcie statku. Po wiecej informacji napisz TORNADO')
+            print('// kraken // poznamy po braku żadnej specyficznej chumry. Po wiecej informacji napisz kraken')
+            print('// megalodon // pojawia się losowo podczas rozygrywki atakując statki')
+            print()
+            
+            
+            wyd = input('po więcej informacji o danym wydarzeniu po prostu napisz jego nazwe ')
+            
+            
+            if wyd == "tornado":
+                print("Tornado znane również pod nazwą Ashen Winds rozpoznamy przez pojawienie się masywnego czerwonego Tornada na horyzoncie. Prowadzi ono graczy do miejsca rytuału przywołania Władcy Popiołów przez Szkielety Popiołu. Wydarzenie to składa się z trzyfazowej walki przeciwko jednemu z czterech Władców Popiołów: Czerwonej Ruth, Staremu Horatio, Strażnikowi Chi i Kapitanowi Grimmowi. Lordowie dysponują różnymi unikalnymi atakami o tematyce Ognia, zyskując potężniejsze umiejętności w miarę postępów w fazach walki. Po porażce Lordowie pozostawiają po sobie Czaszkę Ashen Winds i 15 innych popielnych skarbów. Czaszka Ashen Winds to specjalna czaszka z nagrody, którą można sprzedać lub użyć jako broń typu miotacz ognia. Zalecane jest używanie Blunderbussa oraz miecza. Ciekawą taktyką jest też używanie trójzębów gdyż na bardzo krótko unieruchamiają one Władce oraz mają o wiele większy zapas amunicji")
+                print()
+                break
+            elif wyd == "skelly":
+                print('Forty Szkieletów to wydarzenie  które poznamy po dużej Czaszce z zielonymi oczami na niebie. Aktywny Fort Szkieletów może pojawić się na dowolnej wyspie typu Forteca, działa na wyspach zostaną obsadzone przez Szkielety, które próbują bronić Krypty Fortecy.  W danym momencie może być aktywny tylko jeden Fort Szkieletów. Gdy znajdziesz się w zasięgu Szkieletowego Fortu, usłyszysz złowieszczą muzykę. W forcie trzeba będzie pokonać około 12 fal Szkieletów różnych typów, aby pojawiły się ostatnie trzy fale Kapitanów Szkieletów. Pierwsza fala Bossów posiada Kapitana Szkieletów, który upuszcza nikczemną czaszkę z nagrody, druga fala Bossów zawiera Mistrza Klucza Popiołu i Strażnika Popiołu, które pozwalają graczom zdobyć Klucz Popiołu i Skrzynię Popiołu. Ostatnia fala bossów przywołuje jednego z trzech Władców Szkieletów: Zbuntowanego Sternika, Dwulicowego Łotra lub Księżną. Gdy finałowy boss zostanie zabity, upuści on Czaszkę Twierdzy, Misję Zakonu Szkieletów prowadzącą do skrzynki łachmanów i gnatów oraz Klucz Twierdzy, którego można użyć do otwarcia Krypty pod główną wieżą Fortecy. Wydarzenie Fortu Szkieletów jest dość opłacalne, ponieważ Krypta ukrywa po jednym rzadkim przedmiocie z każdej Twierdzy, garść różnych innych skarbów, kilka beczek z prochem, klejnoty syren, prezenty i skrzynię z popiołem. Forteca Stopionych Piasków nagradza załogi dodatkową Skrzynią Szału za zwiększone ryzyko związane z regionem Wulkanicznym. Poleca się używania Blunderbussa oraz miecza a na bossa można użyć dział ze statku lub trójzębów')
+                print()
+                break
+            elif wyd == 'fortuna':
+                print("Fort of Fortune to wydarzenie które jest prawie identyczne z wydarzeniem Fort Szkieletów, ale stanowi większe wyzwanie. W przeciwieństwie do zwykłego Fortu Szkieletów, Kapitanowie Szkieletów będą upuszczać Rozkazy Szkieletów w zamian za więcej i trudniejszych przeciwników. Dodatkowo pojawią się wszyscy 3 Władcy Szkieletów a jeden z 4 Władców Popiołów zastąpi ostatniego bossa. Nagrody znalezione w skarbcu fortu obejmują skarby o dużej wartości, w tym Fortunę Ateny Skarby. Forts of Fortune można rozpoznać po świecącej, czerwonej pękniętej chmurze czaszki, która pojawia się nad nią, wraz z głębokim, przypominającym róg dźwiękiem, który odbija się echem w oceanie, gdy się pojawia.")
+                print()
+                break
+            elif wyd == 'flota':
+                print('Flota Szkieletów to wydarzenie na które wskazuje duża zielona chmura w kształcie statku. Flota Szkieletów stanie się aktywna, gdy statek znajdzie się w zasięgu Chmury. Po aktywacji wokół statków pojawią się trzy fale 1/2 statków szkieletowych. Każdy pokonany statek-szkielet będzie pozostawi łupy ze zwykłych tabel łupów statku-szkieletu. Podczas ostatniej fali jeden ze statków-szkieletów odrodzi się z kapitanem-szkieletem na pokładzie. Po zatopieniu galeonu kapitańskiego wydarzenie dobiega końca, nawet jeśli drugi statek z ostatniej fali nadal jest aktywny. Statek Kapitana Szkieletów zazwyczaj upuszcza 4 Skrzynie Kapitana Szkieletów, 4 Czaszki Kapitana Szkieletów, 3 Czaszki Rytualne i 3 Skrzynie Popiołu oraz zwykłych Łupów ze Szkieletów.')
+                print()
+                break
+            elif wyd == 'kraken':
+                print('Krakena pojawia się odrodzić tylko wtedy, gdy nie są aktywne żadne inne Wydarzenia w Otwartym Świecie. Kraken nie ma oznaczenia chmury, zamiast tego zaatakuje losowy statek na otwartym morzu zaraz po zakończeniu wydarzenia światowego. Kraken nie atakuje statku, który znajduje się w zasięgu wyspy, portu lub wraku statku, więc jeśli chce się uciec przed Krakenem, zaleca się trzymanie się blisko punktu orientacyjnego i czekanie na pojawienie się następnego wydarzenia światowego.Na pojawienie się Krakena wskazuje złowieszczy dźwięk, a otaczające wody statku nagle stają się czarne od atramentu. Po tym z wody wyłoni się wiele macek Krakena, które zaczną bić i chwytać statek. W zależności od wielkości załogi lub statku, należy zabić inną liczbę macek Krakena, aby Kraken się odwrócił. Slup musi pokonać 2-3, Brigantine około 5-6, a galeon około 7-8 macek. Przed Krakenem można również uciec, jeśli statek płynie poza Atramentem Krakena. Każda Macka upuszcza jeden kawałek Mięsa Krakena i 1-2 losowe Skarby.')
+                print()
+                break
+            elif wyd == "megalodon":
+                print('Megalodony to ogromne rekiny wielkości slupów, które polują na niczego niepodejrzewające załogi na otwartych morzach. Istnieje pięć megalodonów o różnych kolorach, zachowaniach i rzadkości, które mogą wynurzyć się z mórz przy napiętej muzyce i zacząć krążyć wokół statku załogi. Podobnie jak Krakeny, te Megalodony mogą pojawiać się tylko na Otwartych Morzach. Kiedy gracze zbytnio zbliżą się do punktów orientacyjnych lub wysp, Megalodon często rezygnuje z pościgu, czekając na powrót statku z brzegów. Od czasu do czasu Megalodon szarżuje na statek, przewracając statek wraz z członkami załogi wystarczająco blisko szarży i pozostawiając zepsuty kadłub. Megalodony muszą być zwalczane za pomocą dział i mają różną wytrzymałość w zależności od wielkości statku. Oprócz Mięsa Megalodona mają pulę nagród podobną do Szkieletów.')
+                print()
+                break
+            else:
+                print('nie rozumiem polecenia ')
+
+
+
+    elif jmpl == "zagle":
+        while 1:
+
+
+            print('Witam w opcji pomagającej ustawić żagle.')
+            statekl = input('Na początku podaj swój statek: Sloop, Bryg czy Galeon. ').lower()
+
+            if statekl == 'sloop':
+                wiatr = input('podaj kierunek wiatru (headwind, crosswind, tailwind, into crosswind) ').lower()
+
+                if wiatr == 'headwind':
+                    print('ustaw żagle tak żeby zderzały się z wiatrem, twoja szacowana prędkość to 1,05 m/s co jest najszybciej pod wiatr w całej grze')
+                    print()
+                    break
+                elif wiatr == 'crosswind':
+                    print('ustaw żagle z przeciwnej strony statku tak by łapały wiatr szacowana prędkość to 1,53 m/s')
+                    print()
+                    break
+                elif wiatr == 'tailwind':
+                    print('ustaw żagle na prosto tak by łapały pełen wiatr szacowana prędkość to 1,39 m/s ')
+                    print()
+                    break
+                elif wiatr == 'into crosswind':
+                    print ('ustaw żagle na prosto względem statku szacowana prędkość to 1,26 m/s ')
+                    print()
+                    break
+                else:
+                    print('nie rozumiem polecenia ')
+            if statekl == 'bryg':
+                wiatr = input('podaj kierunek wiatru (headwind, crosswind, tailwind, into crosswind) ').lower()
+
+                if wiatr == 'headwind':
+                    print('ustaw żagle tak żeby zderzały się z wiatrem, twoja szacowana prędkość to 1 m/s ')
+                    print()
+                    break
+                elif wiatr == 'crosswind':
+                    print('ustaw żagle z przeciwnej strony statku tak by łapały wiatr szacowana prędkość to 2,30 m/s (najszybciej w całej grze)')
+                    print()
+                    break
+                elif wiatr == 'tailwind':
+                    print('ustaw żagle na prosto tak by łapały pełen wiatr szacowana prędkość to 1,69 m/s ')
+                    print()
+                    break
+                elif wiatr == 'into crosswind':
+                    print ('ustaw żagle po przeciwnej stronie tak by były jak najbliżej łapania wiatru szacowana prędkość to 1,53 m/s ')
+                    print()
+                    break
+                else:
+                    print('nie rozumiem polecenia ')
+
+            if statekl == 'galeon':
+                wiatr = input('podaj kierunek wiatru (headwind, crosswind, tailwind, into crosswind) ').lower()
+
+                if wiatr == 'headwind':
+                    print('ustaw żagle tak żeby zderzały się z wiatrem, twoja szacowana prędkość to 0,93 m/s ')
+                    print()
+                    break
+                elif wiatr == 'crosswind':
+                    print('ustaw żagle z przeciwnej strony statku tak by łapały wiatr szacowana prędkość to 2,07 m/s ')
+                    print()
+                    break
+                elif wiatr == 'tailwind':
+                    print('ustaw żagle na prosto tak by łapały pełen wiatr szacowana prędkość to 1,71 m/s co jest najszybciej w ten sposób spośród wszystkich statków')
+                    print()
+                    break
+                elif wiatr == 'into crosswind':
+                    print ('ustaw żagle po przeciwnej stronie tak by były jak najbliżej łapania wiatru szacowana prędkość to 1,65 m/s co jest najszybciej w ten sposób spośród wszystkich statków ')
+                    print()
+                    break
+                else:
+                    print('nie rozumiem polecenia ')
+
+                
+
+    elif jmpl == "outpost":
+        
+        while 1:
+            
+            alfabet = {'a': 1,  'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 15, 'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20, 'v': 21, 'w': 22, 'x': 23, 'y': 24, 'z': 25}
+            
+            
+            x = input('podaj wartość x ')
+            y = (int(input('podaj wartość y ')))
+
+            a = (alfabet.get(x, 0))
+            
+            sanctuary = [6 , 7]
+            golden_sands = [4, 10]
+            plunder = [10, 18]
+            ancient = [16, 17]
+            galleons = [17, 8]
+            dagger = [13, 8]
+            morrows = [21, 17]
+
+            y1 = y
+            x1 = a
+             
+            #sanctuary
+        
+            sx2 = sanctuary[0]
+            sy2 = sanctuary[1]
+            
+            swynik = math.sqrt((sx2 - x1)**2 + (sy2 - y1)**2)
+
+            #golden_sands
+
+            gsx2 = golden_sands[0]
+            gsy2 = golden_sands[1]
+            gswynik = math.sqrt((gsx2 - x1)**2 + (gsy2 - y1)**2)
+
+            #plunder
+
+            px2 = plunder[0]
+            py2 = plunder[1]
+            pwynik = math.sqrt((px2 - x1)**2 + (py2 - y1)**2)
+    
+            #ancient
+
+
+            ax2 = ancient[0]
+            ay2 = ancient[1]
+            awynik = math.sqrt((ax2 - x1)**2 + (ay2 - y1)**2)
+
+            #galleons
+
+            gx2 = galleons[0]
+            gy2 = galleons[1]
+            gwynik = math.sqrt((gx2 - x1)**2 + (gy2 - y1)**2)
+
+            #dagger
+
+            dx2 = dagger[0]
+            dy2 = dagger[1]
+            dwynik = math.sqrt((dx2 - x1)**2 + (dy2 - y1)**2)
+
+            #morrows
+ 
+            mx2 = morrows[0]
+            my2 = morrows[1]
+            mwynik = math.sqrt((mx2 - x1)**2 + (my2 - y1)**2)
+
+            #najmniejsza wartość
+            
+            dziennik = {mwynik: "Morrow's Peak", dwynik: 'Dagger Tooth', gwynik: "Galleon's Grave", awynik: 'Ancient Spire', pwynik: 'Plunder', gswynik: 'New Golden Sands', swynik: 'Sanctuary' }
+            
+            lista = [mwynik, dwynik, gwynik, awynik, pwynik, gswynik, swynik]
+
+            min_z_listy = (min(lista))
+            
+            nazwa_przystani = (dziennik.get(min_z_listy, 0))
+
+            print(f'najbliższa przystań to {nazwa_przystani}')
+            print()
+            break
+        
+
+    koniec = input("aby wyszukac kolejną informacje wciśnij enter ")
+    
+    print()
+    if koniec == (""):
+        pass
+    else:
+        break
+
